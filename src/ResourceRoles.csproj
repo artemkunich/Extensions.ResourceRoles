@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
+        <AssemblyName>Akunich.Extensions.ResourceRoles</AssemblyName>
+        <RootNamespace>Akunich.Extensions.ResourceRoles</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
