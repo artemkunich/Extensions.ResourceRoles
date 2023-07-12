@@ -1,4 +1,4 @@
-namespace ResourceRoles.Internal;
+namespace Akunich.Extensions.ResourceRoles.Internal;
 
 internal class ResourceRoles
 {

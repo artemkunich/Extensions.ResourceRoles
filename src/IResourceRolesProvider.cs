@@ -1,4 +1,4 @@
-﻿namespace ResourceRoles;
+﻿namespace Akunich.Extensions.ResourceRoles;
 
 public interface IResourceRolesProvider
 {

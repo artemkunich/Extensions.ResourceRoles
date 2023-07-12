@@ -1,8 +1,8 @@
 using System.Reflection;
+using Akunich.Extensions.ResourceRoles.Internal;
 using Microsoft.Extensions.DependencyInjection;
-using ResourceRoles.Internal;
 
-namespace ResourceRoles;
+namespace Akunich.Extensions.ResourceRoles;
 
 public static class ServiceCollectionExtensions
 {
