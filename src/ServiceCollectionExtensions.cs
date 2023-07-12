@@ -6,10 +6,10 @@ namespace Akunich.Extensions.ResourceRoles;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddResourceRolesProvider<TResource>(this IServiceCollection services, string[] roles) =>
+    public static IServiceCollection AddResourceRolesProvider<TResource>(this IServiceCollection services) =>
         services.AddSingleton<IResourceRolesProvider,ResourceRolesProvider>();
     
-    public static IServiceCollection SetRoles<TResource>(this IServiceCollection services, string[] roles)
+    public static IServiceCollection SetRoles<TResource>(this IServiceCollection services, params string[] roles)
     {
         var resourceRoles = new Internal.ResourceRoles
         {
@@ -20,7 +20,7 @@ public static class ServiceCollectionExtensions
         return services.AddSingleton(resourceRoles);
     }
     
-    public static IServiceCollection SetDefaultRoles(this IServiceCollection services, Assembly assembly, string[] roles)
+    public static IServiceCollection SetDefaultRoles(this IServiceCollection services, Assembly assembly, params string[] roles)
     {
         var defaultAssemblyRoles = new DefaultAssemblyRoles
         {
@@ -31,7 +31,7 @@ public static class ServiceCollectionExtensions
         return services.AddSingleton(defaultAssemblyRoles);
     }
     
-    public static IServiceCollection SetDefaultRoles(this IServiceCollection services, string[] roles)
+    public static IServiceCollection SetDefaultRoles(this IServiceCollection services, params string[] roles)
     {
         var defaultRoles = new DefaultRoles
         {
