@@ -6,7 +6,7 @@ namespace Akunich.Extensions.ResourceRoles;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddResourceRolesProvider<TResource>(this IServiceCollection services) =>
+    public static IServiceCollection AddResourceRolesProvider(this IServiceCollection services) =>
         services.AddSingleton<IResourceRolesProvider,ResourceRolesProvider>();
     
     public static IServiceCollection SetRoles<TResource>(this IServiceCollection services, params string[] roles)
